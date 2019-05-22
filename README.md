@@ -11,13 +11,14 @@ to view stats about the bike sharing service. This stats include:
 * total travel time
 * mean travel time
 * number of different types of users
-* count of genders
-* most recent birth year
-* most common birth year
+* count of genders (except for Washington)
+* most recent birth year (except for Washington)
+* most common birth year (except for Washington)
 
 ### Files used
 `bikeshare_2.py`
 
 ### Credits
 User console interaction done using [Pick](https://github.com/wong2/pick).
+
 
