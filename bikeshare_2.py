@@ -18,18 +18,18 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     title = 'Please choose a city: '
-    options = CITY_DATA.keys()
-    city, index = pick(options, title)
+    options = list(CITY_DATA)
+    city = pick(options, title)[0]
 
     # get user input for month (all, january, february, ... , june)
     title = 'Please choose a month: '
     options = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
-    month, index = pick(options, title)
+    month = pick(options, title)[0]
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     title = 'Please choose a day: '
     options = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
-    day, index = pick(options, title)
+    day = pick(options, title)[0]
 
     print('-'*40)
     return city, month, day
@@ -115,7 +115,7 @@ def station_stats(df):
     print("Most popular end station: {}".format(end_station))
 
     # display most frequent combination of start station and end station trip
-    df['trip']=df['Start Station'] + ' <-> ' + df['End Station']
+    df['trip']="{} <-> {}".format(df['Start Station'], df['End Station'])
     combination = df['trip'].value_counts().idxmax()
     print("Most popular combination: {}".format(combination))
 
