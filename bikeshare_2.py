@@ -160,7 +160,7 @@ def user_stats(df):
         min_year = df['Birth Year'].min()
         max_year = df['Birth Year'].max()
         common_year = df['Birth Year'].mode()
-        print('Earlies birth year: {}'.format(int(min_year))) 
+        print('Earliest birth year: {}'.format(int(min_year))) 
         print('Most recent birth year: {}'.format(int(max_year)))
         print('Most common year: {}'.format(int(common_year)))
     else:
